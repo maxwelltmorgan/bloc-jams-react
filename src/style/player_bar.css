@@ -1,0 +1,173 @@
+.player-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.player-bar .container {
+    padding: 0;
+    width: 98%;
+    min-height: 100%;
+}
+
+.control-group {
+  text-align: center;
+}
+
+#time-control {
+  margin-top: 20px;
+}
+
+#time-control .current-time {
+  float: left;
+  padding-left: 10px;
+  font-size: .8rem;
+  color: #1E1F26;
+}
+
+#time-control .seek-bar {
+  width: 90%;
+  cursor: pointer;
+}
+
+#time-control .total-time {
+  float: right;
+  font-size: .8rem;
+  color: #1E1F26;
+}
+
+#voting {
+  display: inline-block;
+  width: 15%;
+}
+
+.vote-item {
+  display: inline;
+}
+
+.vote-item:hover {
+  color: #4d648d;
+}
+
+.song {
+  padding: 10px;
+  color: #1E1F26;
+}
+
+#nowPlaying {
+  display: inline-block;
+  width: 15%;
+  font-size: .8rem;
+  text-align: right;
+}
+
+#buttons {
+  display: inline-block;
+  width: 45%;
+}
+
+#volume-control {
+  display: inline-block;
+  width: 25%;
+}
+
+#volume-control .seek-bar {
+  cursor: pointer;
+}
+
+.row-two {
+  height: 100px;
+  margin-top: 15px;
+}
+
+.ion-volume-high {
+  display: inline;
+  font-size: 1.1rem;
+  padding-left: 5px;
+  color: #1E1F26;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 30px;
+  padding: 5px 20px 5px 20px;
+  vertical-align: middle;
+  color: #1E1F26;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #4d648d;
+}
+
+#play-pause {
+  font-size: 2.8rem;
+  border: solid 5px #1E1F26;
+  position: relative;
+  border-radius: 100%;
+  width: 80px;
+}
+
+#play-pause:hover {
+  border: solid 5px #4d648d;
+}
+
+.ion-thumbsup {
+  display: inline;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #1E1F26;
+  cursor: pointer;
+}
+
+.ion-thumbsdown {
+  display: inline;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #1E1F26;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+
+    .player-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .player-bar .control-group {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    #time-control .slider-square {
+      width: 80%;
+    }
+
+    #voting {
+      display: none;
+    }
+
+    #nowPlaying {
+      display: none;
+    }
+
+    #buttons {
+      display: block;
+      width: 100%;
+    }
+
+    #volume-control {
+      display: none;
+    }
+}

@@ -1,28 +1,61 @@
-.App {
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(to bottom right, #4D648D, #D0E1F9, #FFFFFF);
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    position: relative;
+    padding: 0.5rem;
+    background-color: #1E1F26;
+    z-index: 1;
+}
+
+.navbar > .logo {
+    position: relative;
+    left: 1rem;
+    cursor: pointer;
+}
+
+.navbar .links-container {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80px;
+}
+
+.links-container .navbar-link {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-size: 0.625rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links-container .navbar-link:hover {
+  color: #D0E1F9;
+}
+
+.album-cover-art {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

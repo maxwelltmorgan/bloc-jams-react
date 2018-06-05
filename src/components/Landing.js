@@ -1,22 +1,22 @@
 import React from 'react';
+import '../style/Landing.css';
 
 const Landing = () => (
   <section className="landing">
-    <h1 className="hero-title">Turn the music up!</h1>
-
-    <section className="selling-points">
-      <div className="point">
-        <h2 className="point-title">Choose your music</h2>
-        <p className="point-description">The world is full of music: why should you have to listen to music that someone else chose?</p>
-      </div>
-      <div className="point">
-        <h2 className="point-title">Unlimited, streaming, ad-free</h2>
-        <p className="point-description">No arbitrary limits.  No distractions.</p>
-      </div>
-      <div className="point">
-        <h2 className="point-title">Mobile enabled</h2>
-        <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
-      </div>
+    <section className="welcome">
+      <h1>Welcome to Crafted Sound</h1>
+      <p>Please enjoy our free music player.  Music is a powerful force we believe should be available to all.  Check out just a few of the many health benefits listeners frequently experience...</p>
+    </section>
+    <section className="benefits benefits-container">
+      <div className="benefit box1">Improve Mood</div>
+      <div className="benefit box2">Reduce Stress</div>
+      <div className="benefit box3">Lessen Anxiety</div>
+      <div className="benefit box4">Improve Exercise</div>
+      <div className="benefit box5">Improve Memory</div>
+      <div className="benefit box6">Ease Pain</div>
+    </section>
+    <section className="motivate">
+     <h1>Check out our library to begin listening today!</h1>
     </section>
   </section>
 );

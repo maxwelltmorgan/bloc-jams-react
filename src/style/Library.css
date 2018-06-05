@@ -1,0 +1,35 @@
+.album-covers {
+     position: relative;
+ }
+
+ .collection-album-container {
+     position: relative;
+     margin-top: 30px;
+     margin-bottom: 20px;
+     text-align: center;
+ }
+
+ .collection-album-container .caption {
+     margin-top: 10px;
+     color: grey;
+     text-decoration: none;
+     font-size: .75rem;
+ }
+
+.album-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1E1F26;
+}
+
+.album-name:hover {
+  color: #888888;
+}
+
+ .collection-album-container img {
+     width: 80%;
+ }
+
+ .album-link {
+   text-decoration: none;
+ }

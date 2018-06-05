@@ -1,0 +1,103 @@
+.album-container {
+    width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.song-number {
+  color: #1E1F26;
+  font-weight: lighter;
+}
+
+.song-title {
+  color: #4D648D;
+  font-weight: bold;
+}
+
+.song-title:hover {
+  color: #D0E1F9;
+  cursor: pointer;
+}
+
+.song-duration {
+  color: #1E1F26;
+  font-weight: lighter;
+}
+
+#song-list {
+  margin-top: 100px;
+}
+
+#album-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+#album-cover-art {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.artist {
+  margin-top: .2rem;
+  font-size: .8rem;
+}
+
+#release-info {
+  font-size: .8rem;
+}
+
+@media (min-width: 640px) {
+    html { font-size: 112%; }
+
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
+
+@media (max-width: 640px) {
+  #song-list {
+
+    margin: 10px auto 10px auto;
+  }
+
+  #album-info{
+    width: 100%;
+  }
+
+  #album-info h1, #album-info h2, #album-info div {
+    text-align: center;
+  }
+
+  #album-info img{
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+  }
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+#album-cover-art {
+  width: 80%;
+  height: auto;
+}

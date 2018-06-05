@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import '../style/Album.css';
 import PlayerBar from './PlayerBar';
 
 class Album extends Component {
@@ -105,7 +106,9 @@ class Album extends Component {
   }
 
   formatTime(seconds) {
-    if(isNaN(seconds)) { return "-:--";}
+    if(isNaN(seconds)) {
+      return "-:--";
+    }
 
     const wholeSeconds = Math.floor(seconds);
     const minutes = Math.floor(wholeSeconds/60);
@@ -122,32 +125,34 @@ class Album extends Component {
   render() {
     return (
       <section className="album">
-        <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt='' />
-          <div className="album-details">
-            <h1 id="album-title">{this.state.album.title}</h1>
-            <h2 className="artist">{this.state.album.artist}</h2>
+        <section className="album-split album-container clearfix">
+          <section id="album-info" className="column half">
+            <div className="album-details">
+              <h1 id="album-title">{this.state.album.title}</h1>
+              <h2 className="artist">by {this.state.album.artist}</h2>
+            </div>
+            <img id="album-cover-art" src={this.state.album.albumCover} alt='' />
             <div id="release-info">{this.state.album.releaseInfo}</div>
-          </div>
+          </section>
+          <table id="song-list" className="column half">
+            <colgroup>
+              <col id="song-number-column" />
+              <col id="song-title-column" />
+              <col id="song-duration-column" />
+            </colgroup>
+            <tbody>
+            {
+              this.state.album.songs.map( (song, index) =>
+              <tr className='song' key={index} onClick={() => this.handleSongClick(song)}>
+                <td className="song-number">{index+1}.</td>
+                <td className="song-title">{song.title}</td>
+                <td className="song-duration">{this.formatTime(song.duration)}</td>
+              </tr>
+              )
+            }
+            </tbody>
+          </table>
         </section>
-        <table id="song-list">
-          <colgroup>
-            <col id="song-number-column" />
-            <col id="song-title-column" />
-            <col id="song-duration-column" />
-          </colgroup>
-          <tbody>
-          {
-            this.state.album.songs.map( (song, index) =>
-             <tr className='song' key={index} onClick={() => this.handleSongClick(song)}>
-              <td className="song-number">{index+1}</td>
-              <td className="song-title">{song.title}</td>
-              <td className="song-duration">{this.formatTime(song.duration)}</td>
-             </tr>
-            )
-          }
-          </tbody>
-        </table>
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}

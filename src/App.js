@@ -10,11 +10,14 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <nav>
-            <Link to='/'>Landing</Link>
-            <Link to='/library'>Library</Link>
+          <nav className='navbar'>
+            <Link className='logo' to='/'>
+              <img src='assets/images/craftedSound.png' alt='crafted sound logo' className='logo' height='60'/>
+            </Link>
+            <div className='links-container'>
+              <Link className='navbar-link' to='/library'>Library</Link>
+            </div>
           </nav>
-          <h1>Bloc Jams</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />

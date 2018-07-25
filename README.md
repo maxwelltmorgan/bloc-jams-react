@@ -2,7 +2,9 @@
 a real-time chat app built with ReactJS
 
 ![Screenshot](/public/assets/landing.png)
+
 ![Screenshot](/public/assets/library.png)
+
 ![Screenshot](/public/assets/album.png)
 
 What's used:
